@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desviacion Estandar</title>
+
+    <style>
+        :root{
+            --primary-color: #0c2d48;
+            --secundary-color: #2e8bc0;
+            --bg-dark: #145da0;
+            --bg-light: #b1d4e0;
+           
+        }
+        body{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--primary-color);
+        }
+        .title{
+            text-align: center;
+        }
+        .container-form{
+            width: 100%;
+            display: grid;
+            place-items: center;
+            
+        }
+        .form{
+            width: 350px;
+            height: auto;
+            background-color: var(--secundary-color);
+            padding: 24px;   
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;    
+
+        }
+        .subtitle{
+            margin-bottom: 8px;
+        }
+        .label{
+            margin-bottom: 8px;
+        }
+        .input{
+            border: none;
+            outline: none;
+            border-radius: 8px;
+            height: 32px;
+            margin-bottom: 8px;
+        }
+        .button{
+            height: 32px;
+            border: 1px solid #cee9ff;
+            border-radius: 8px;
+            outline: none;
+            background-color: #dce8ec;
+            color: var(--bg-light);
+            font-weight: 500;
+            /* margin-bottom: 12px; */
+        }
+        .button:hover{
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background-color: var(--bg-light);
+        }
+        .resultado{
+            width: 300px;
+            padding: 10px;
+            margin: 4px;
+            overflow: hidden;
+        }
+     </style>
+
+</head>
+<body>
+    <header>
+        <h1 class="title">Desviación Estandar</h1>
+    </header>
+
+    <div class="container-form">
+        <form action="" class="form">
+            <h2 class="subtitle">Aplicación que calcula la desviación estandar</h2>
+            <label for="inputNumero" class="label">Ingresa una serie de numeros separados por comas ",".</label>
+            <input type="text" id="inputNumero" class="input" placeholder="Ej: 10,5,7,19...">
+
+            <button type="button" class="button" onclick="onClickCalcularDesviacionEstandar()">Desviación Estandar</button>
+            <p id="lista" class="resultado">    </p>
+            <p id="moda" class="resultado"></p>
+            <p id="medianaSalarial" class="resultado"></p>
+            <p id="medianaSalarialTop10" class="resultado"></p>
+            <p id="resultP" class="resultado"></p>
+        </form>
+    </div>
+
+    
+    <script src="./salario.js"></script>
+    <script src="./desviacionTipica.js"></script>
+</body>
+</html>

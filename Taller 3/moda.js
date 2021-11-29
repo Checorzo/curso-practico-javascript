@@ -25,20 +25,21 @@ function calcularModa(lista){
             }
         }
     )
-
+   
     const listaArray = Object.entries( listaCount ).sort(
         function(valorAcumulado, nuevoValor){
         return valorAcumulado[1] - nuevoValor[1];
         }
     );
-
+    
     const modaLista = listaArray[ listaArray.length - 1 ];
-
+    
     const modas = listaArray.filter(
         function(numeroMayor){
             return numeroMayor[1] === modaLista[1];
         }
     );
+
         return modas;
         
 }
